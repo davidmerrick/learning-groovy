@@ -2,7 +2,7 @@ class Leap {
 
     int year
 
-    def Leap(year) {
+    Leap(year) {
         this.year = year
     }
 

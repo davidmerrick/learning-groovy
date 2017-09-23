@@ -1,6 +1,6 @@
 class Hamming {
 
-    def Hamming() {}
+    Hamming() {}
 
     def getDiff(String longerString, String shorterString){
         def count = 0;

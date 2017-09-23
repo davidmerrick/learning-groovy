@@ -1,7 +1,5 @@
 import groovy.time.TimeCategory
 
-import java.time.Duration
-
 class Gigasecond {
 
     def Gigasecond() {}
