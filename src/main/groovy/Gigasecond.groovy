@@ -2,7 +2,7 @@ import groovy.time.TimeCategory
 
 class Gigasecond {
 
-    def Gigasecond() {}
+    Gigasecond() {}
 
     def from(Date startDate){
         Date newDate
