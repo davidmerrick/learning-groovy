@@ -6,26 +6,26 @@ class WordCount {
         this.sentence = sentence
     }
 
-    def getDelimiter(sentence){
+    def getDelimiter(sentence) {
         def result
-        switch(sentence){
-            case sentence.contains(",") && !sentence.contains(" "):
-                result = ","
-                break
-            default:
-                result = " "
-                break
+
+        if (sentence.contains(",") && !sentence.contains(" ")){
+            result = ","
+        } else {
+            result = " "
         }
         result
     }
 
     def wordCount(){
         def delimiter = getDelimiter(sentence)
-        def wordMap = sentence
+        def wordList = sentence
                 .split(delimiter)
                 .collect { it -> it.replace(",", "") }
-                .collect { it -> it.replaceAll(/[\:\!\?\&\@\%\^\$]/, "") }
-                .countBy {it}
+                .collect { it -> it.replaceAll(/[\:\!\?\&\@\%\^\$\.]/, "") }
+                .collect { it -> it.toLowerCase() }
+        wordList.removeAll { !it }
+        def wordMap = wordList.countBy {it}
         wordMap
     }
 }
