@@ -23,8 +23,8 @@ class WordCount {
         def delimiter = getDelimiter(sentence)
         def wordMap = sentence
                 .split(delimiter)
-                .removeIf(!it ==~ "/*[A-Za-z]*/")
                 .collect { it -> it.replace(",", "") }
+                .collect { it -> it.replaceAll(/[\:\!\?\&\@\%\^\$]/, "") }
                 .countBy {it}
         wordMap
     }
