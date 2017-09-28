@@ -18,6 +18,4 @@ class TwoFerSpec extends Specification {
     def 'Bob given as name'() {
         expect: TwoFer.twoFer('Bob') == 'One for Bob, one for me.'
     }
-
-
 }
