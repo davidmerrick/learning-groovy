@@ -13,15 +13,15 @@ class RobotName {
     }
 
     RobotName() {
-        this.getName()
+        this.generateName()
     }
 
     def reset(){
-        this.getName()
+        this.generateName()
     }
 
-    def getName(){
-        def name = ""
+    def generateName(){
+        name = ""
         name += getRandomChar()
         name += getRandomChar()
         name += getRandomDigit()
